@@ -4,13 +4,9 @@ import scala.collection.immutable.HashSet
 //immutable set: append, add or remove operations will create and return a new collection
 // leaving the original one intact
 
-var jetSet = Set("Boeing", "Jetsmart")
-var mixSet = Set(1, "Jose", "Ricardo", 0.2)
-var numSet = Set(1, 1, 1, 1)
-
-println(jetSet)
-
-jetSet += "Ranquel"
+val jetSet = Set("Boeing", "Jetsmart")
+val mixSet = Set(1, "Jose", "Ricardo", 0.2)
+val numSet = Set(1, 1, 1, 1)
 
 println(jetSet)
 

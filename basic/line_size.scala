@@ -4,6 +4,7 @@ def widthOfLength(s: String) = s.length.toString.length
 
 if (args.length > 0) {
 
+  // Danger! It loads all the file in memory. ¿How can we do this more memory-friendly?
   val lines : List[String] = Source.fromFile(args(0)).getLines.toList
 
   val longestLine = lines.reduceLeft(
@@ -12,7 +13,7 @@ if (args.length > 0) {
 
   val maxWidth = widthOfLength(longestLine)
 
-  for (line <- Source.fromFile(args(0)).getLines()) {
+  for (line <- lines) {
     val numSpaces = maxWidth - widthOfLength(line)
     val padding = " " * numSpaces
     println(padding + line.length + " | " + line)
